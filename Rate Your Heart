@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RateMyHeart - Food Health Rating</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .hearts {
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🍽 Rate My Heart - Food Health Analyzer ❤️</h1>
+    <div id="container">
+        <h3>Enter a Dish Name</h3>
+        <input type="text" id="dishName" placeholder="E.g., Grilled Salmon">
+        <button onclick="analyzeDish()">Analyze</button>
+
+        <h2>🍎 Health Report 🍎</h2>
+        <div id="result"></div>
+        <h3 class="hearts" id="heartRating"></h3>
+    </div>
+
+    <script>
+        function analyzeDish() {
+            const dish = document.getElementById("dishName").value.trim();
+
+            if (dish === "") {
+                alert("Please enter a dish name!");
+                return;
+            }
+
+            // Simulated data (In a real application, this would come from a database or API)
+            const healthData = {
+                "Grilled Salmon": { hearts: 6, carbs: 10, protein: 25, fat: 8, GI: 30, calories: 250 },
+                "Cheeseburger": { hearts: 3, carbs: 45, protein: 20, fat: 30, GI: 75, calories: 600 },
+                "Quinoa Salad": { hearts: 7, carbs: 35, protein: 12, fat: 5, GI: 35, calories: 220 },
+                "French Fries": { hearts: 2, carbs: 50, protein: 3, fat: 20, GI: 85, calories: 450 },
+                "Fruit Smoothie": { hearts: 5, carbs: 40, protein: 5, fat: 2, GI: 50, calories: 180 },
+            };
+
+            const dishData = healthData[dish] || { hearts: Math.floor(Math.random() * 7) + 1, carbs: "Unknown", protein: "Unknown", fat: "Unknown", GI: "Unknown", calories: "Unknown" };
+
+            // Generate heart rating
+            const hearts = "❤️".repeat(dishData.hearts) + "🤍".repeat(7 - dishData.hearts);
+
+            // Display results
+            document.getElementById("result").innerHTML = `
+                <p><strong>Dish:</strong> ${dish}</p>
+                <p><strong>Calories:</strong> ${dishData.calories} kcal</p>
+                <p><strong>Carbohydrates:</strong> ${dishData.carbs}g</p>
+                <p><strong>Protein:</strong> ${dishData.protein}g</p>
+                <p><strong>Fats:</strong> ${dishData.fat}g</p>
+                <p><strong>Glycemic Index (GI):</strong> ${dishData.GI}</p>
+            `;
+
+            document.getElementById("heartRating").innerHTML = `Health Rating: ${hearts}`;
+        }
+    </script>
+
+</body>
+</html>
