@@ -1,0 +1,52 @@
+function whatWeDo() {
+    const content = `
+    What We Do
+    
+    At RateMyHeart.com, we analyze and review restaurant dishes based on their potential effects 
+    on key health concerns, including:
+
+    ✔ **Cardiovascular Health** – Are the ingredients heart-friendly, or do they contribute to 
+      high cholesterol and blood pressure?
+    ✔ **Obesity & Weight Management** – Is the dish balanced, or is it packed with excess calories, 
+      unhealthy fats, and sugars?
+    ✔ **Cancer Risk Factors** – Does it contain processed ingredients or harmful additives linked to 
+      increased cancer risks?
+    ✔ **Other Non-Communicable Diseases** – How does it impact diabetes, gut health, and overall well-being?
+
+    Our approach includes:
+    
+    🔬 **Ingredient Analysis**  
+    - Studying ingredients for their **nutritional benefits** and **potential health risks**.  
+    - Identifying **processed foods, artificial additives, and harmful fats**.  
+
+    🍳 **Cooking Methods Evaluation**  
+    - Assessing whether food is **fried, grilled, baked, boiled, or raw**, and its impact on **nutrient retention**.  
+    - Evaluating the use of **healthy vs. unhealthy oils and cooking techniques**.  
+
+    🔢 **Caloric & Nutritional Breakdown**  
+    - Calculating total **calories per serving**.  
+    - Providing a **macro & micronutrient breakdown**:  
+      - **Carbohydrates** (good vs. bad carbs)  
+      - **Proteins** (lean vs. processed)  
+      - **Fats** (healthy vs. trans fats)  
+      - **Vitamins & Minerals** (essential micronutrients for well-being)  
+
+    📊 **Glycemic Index (GI) Rating**  
+    - Measuring the **GI score** of dishes to determine their impact on **blood sugar levels**.  
+    - Highlighting **low-GI, medium-GI, and high-GI foods** for diabetic-friendly choices.  
+
+    ⚖️ **Portion Control & Health Impact**  
+    - Recommending **optimal serving sizes** for balanced nutrition.  
+    - Identifying portions that are **beneficial vs. harmful** based on dietary needs.  
+
+    Our **Heart Rating System** provides a clear, science-backed assessment of how a dish affects your health.  
+    By combining expert reviews with **nutritional data**, we empower you to make mindful, healthy dining choices.  
+
+    Eat smart, stay healthy, and let **RateMyHeart.com** guide your journey toward better food choices!  
+    `;
+    
+    console.log(content);
+}
+
+// Call function to display the content in the console
+whatWeDo();
